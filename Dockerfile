@@ -46,10 +46,10 @@ WORKDIR /app
 ENV VIRTUAL_ENV /env
 ENV PATH /env/bin:$PATH
 
-RUN isql -v -k "DRIVER={ODBC Driver 17 for SQL Server};SERVER=library-devops.database.windows.net;UID=test;PWD=test"
-RUN cat /etc/odbc.ini
-RUN python manage.py makemigrations \
-    && python manage.py migrate
+#RUN isql -v -k "DRIVER={ODBC Driver 17 for SQL Server};SERVER=library-devops.database.windows.net;UID=adminbro;PWD=RedLightGreenLight123"
+#RUN cat /etc/odbc.ini
+#RUN python manage.py makemigrations \
+#    && python manage.py migrate
 
 EXPOSE 8000
 
