@@ -46,7 +46,7 @@ WORKDIR /app
 ENV VIRTUAL_ENV /env
 ENV PATH /env/bin:$PATH
 
-RUN isql -v -k "DRIVER={ODBC Driver 17 for SQL Server};SERVER=localhost;UID=test;PWD=test"
+RUN isql -v -k "DRIVER={ODBC Driver 17 for SQL Server};SERVER=127.0.0.1;UID=test;PWD=test"
 RUN cat /etc/odbc.ini
 RUN python manage.py makemigrations \
     && python manage.py migrate
