@@ -104,7 +104,7 @@ DATABASES = {
         'NAME': 'library-db',
         'USER': env('DB_USERNAME'),
         'PASSWORD': env('DB_PASSWORD'),
-        'HOST': 'library-devops.database.windows.net',
+        'HOST': 'localhost',
         'PORT': '1433',
         #'OPTIONS': {
         #    'driver': 'ODBC Driver 13 for SQL Server',
