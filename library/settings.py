@@ -100,15 +100,8 @@ WSGI_APPLICATION = 'library.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'mssql',
-        'NAME': 'library-db',
-        'USER': 'adminbro',
-        'PASSWORD': 'RedLightGreenLight123',
-        'HOST': 'library-devops.database.windows.net',
-        'PORT': '1433',
-        #'OPTIONS': {
-        #    'driver': 'ODBC Driver 13 for SQL Server',
-        #},
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     },
 }
 
