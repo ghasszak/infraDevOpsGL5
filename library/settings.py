@@ -102,8 +102,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'mssql',
         'NAME': 'library-db',
-        'USER': env('DB_USERNAME'),
-        'PASSWORD': env('DB_PASSWORD'),
+        'USER': 'adminbro',
+        'PASSWORD': 'RedLightGreenLight123',
         'HOST': 'library-devops.database.windows.net',
         'PORT': '1433',
         #'OPTIONS': {
