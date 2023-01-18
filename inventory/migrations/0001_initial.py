@@ -4,6 +4,17 @@ from django.db import migrations, models
 import django.db.models.deletion
 
 
+def populate_names(apps, schema_editor):
+    names = ["12 Reasons this project is not impressive", "3 Valid reason this project is not impressive", "The actual reason this project is not impressive"]                               
+    Author = apps.get_model('inventory', 'Author')
+    obj = Author(full_name="Kaido w'Anas w'Rihab", dob="1999-08-29")
+    obj.save()
+    
+    Book = apps.get_model('inventory', 'Book')
+    for name in names:
+        obj = Book(title=name, author_field_id=1)
+        obj.save()
+
 class Migration(migrations.Migration):
 
     initial = True
@@ -38,4 +49,5 @@ class Migration(migrations.Migration):
             ],
             bases=('inventory.allmodels',),
         ),
+        migrations.RunPython(populate_names)
     ]
